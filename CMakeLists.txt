@@ -6,6 +6,6 @@ cmake_minimum_required (VERSION 3.8)
 project ("Algorithms")
 
 # Add source to this project's executable.
-add_executable (Algorithms   "Searching/BinarySearch.cpp" "Sorting/SelectionSort.cpp")
+add_executable (Algorithms   "Searching/BinarySearch.cpp" "Sorting/SelectionSort.cpp" "Sorting/BubbleSort.cpp" "Sorting/InsertionSort.cpp"    )
 
 # TODO: Add tests and install targets if needed.
