@@ -1,5 +1,5 @@
 /*
-	Quick Sort - End Pivot
+	Quick Sort - Start Pivot
 
 	Time Complexity: O(n log(n))
 	Space Complexity: O(n)
@@ -13,27 +13,27 @@ using namespace std;
 
 int partition(vector<int>& arr, int start, int end)
 {
-	int pivot = arr[end];								// Using the last element as the pivot
-	int j = start - 1;									// Have a counter that points to one space before 
-														// where we will move the pivot at the end of the function
+	int pivot = arr[start];									// Using the first element as the pivot
+	int j = start;											// Have a counter that points to one space after 
+															// where we will move the pivot at the end of the function
 	int tmp;
 
-	for (int i = start; i <= end - 1; ++i)
+	for (int i = start + 1; i <= end; ++i)
 	{
-		if (arr[i] < pivot)								// arr[i] needs to be in the first half of the array, so
-		{												// update the counter, and swap the current value arr[i] with
-			++j;										// arr[j] (Note: arr[j] will always point to a value larger 
-			tmp = arr[i];								// than the pivot until after the for loop
+		if (arr[i] < pivot)									// arr[i] needs to be in the first half of the array, so
+		{													// update the counter, and swap the current value arr[i] with
+			++j;											// arr[j] (Note: arr[j] will always point to a value larger 
+			tmp = arr[i];									// than the pivot until after the for loop
 			arr[i] = arr[j];
 			arr[j] = tmp;
 		}
 	}
 
-	tmp = arr[j + 1];									// Now j + 1 is where the pivot element should be, so
-	arr[j + 1] = arr[end];								// swap the pivot element (arr[end]) with the one at index j + 1
-	arr[end] = tmp;
+	tmp = arr[j];											// Now j is where the pivot element should be, so
+	arr[j] = arr[start];									// swap the pivot element (arr[end]) with the one at index j
+	arr[start] = tmp;
 
-	return j + 1;
+	return j;
 }
 
 

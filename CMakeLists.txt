@@ -20,6 +20,6 @@ add_executable (CMakeTarget
 "Data Structures/Linked List/Doubly Linked List/Class Implementation/DoublyLinkedList.h" 
 "Data Structures/Linked List/Doubly Linked List/Class Implementation/main.cpp"
 "Data Structures/Linked List/Doubly Linked List/STL Implementation/main.cpp"
- "Algorithms/Sorting/Quicksort-End-Pivot.cpp")
+ "Algorithms/Sorting/Quicksort-End-Pivot.cpp" "Algorithms/Sorting/Quicksort-Start-Pivot.cpp")
 
 # TODO: Add tests and install targets if needed.
