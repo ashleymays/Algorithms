@@ -19,7 +19,6 @@ private:
 	DLLNode* tail;
 public:
 	DLList() : head(nullptr), tail(nullptr), length(0) {}
-	DLList(const DLList& obj) : head(obj.head), tail(obj.tail), length(obj.length) {}
 	~DLList();
 
 	int getLength();
