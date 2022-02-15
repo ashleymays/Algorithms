@@ -12,6 +12,8 @@ Algorithms
     * [Mergesort](https://github.com/ashleymays/Algorithms/blob/master/Algorithms/Sorting/Merge-Sort.cpp)
     * [Quicksort - End Pivot](https://github.com/ashleymays/Algorithms/blob/master/Algorithms/Sorting/Quicksort-End-Pivot.cpp)
     * [Quicksort - Start Pivot](https://github.com/ashleymays/Algorithms/blob/master/Algorithms/Sorting/Quicksort-Start-Pivot.cpp)
+* [Math](https://github.com/ashleymays/Algorithms/tree/master/Algorithms/Math)
+   * [Sieve of Eratosthenes](https://github.com/ashleymays/Algorithms/blob/master/Algorithms/Math/Sieve-of-Eratosthenes.cpp)
 
 Data Structures
 * [Array](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Array)
