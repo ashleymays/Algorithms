@@ -23,3 +23,5 @@ Data Structures
     * [Doubly Linked List](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Linked%20List/Doubly%20Linked%20List)
         * [Class Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Linked%20List/Doubly%20Linked%20List/Class%20Implementation)
         * [STL Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Linked%20List/Doubly%20Linked%20List/STL%20Implementation)
+     * [Stack](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Stack)
+         * [Class Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Stack/Class%20Implementation)
