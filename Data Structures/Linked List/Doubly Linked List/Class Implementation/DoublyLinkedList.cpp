@@ -4,7 +4,7 @@
 DLList::~DLList()
 {
 	DLLNode* cur = head;
-	while (cur)
+	while (cur != nullptr)
 	{
 		DLLNode* node = cur->next;
 		delete cur;
@@ -29,59 +29,88 @@ int DLList::getRear()
 
 bool DLList::search(int val)
 {
-	DLLNode* cur = head;								// Node 'cur' is used to read through the list
-	while (cur)
+	// Node 'cur' is used to read through the list
+	DLLNode* cur = head;
+	while (cur != nullptr)
 	{
 		if (val == cur->data)
 		{
 			return true;
 		}
-		cur = cur->next;								// Assign cur to the next node in th elist to iterate
+
+		// Assign cur to the next node in th elist to iterate
+		cur = cur->next;
 	}
 	return false;
 }
 
 void DLList::insertAtBeg(int val)
 {
-	DLLNode* newNode(new DLLNode(val));					// Put the value in a node
-	if (!head)											// !head means that the head is nullptr, i.e. the lsit is empty
+	// Put the value in a node
+	DLLNode* newNode(new DLLNode(val));
+
+	// !head means that the head is nullptr, i.e. the lsit is empty
+	if (head == nullptr)
 	{
-		head = newNode;									// newNode is now both the head and the tail
+		// newNode is now both the head and the tail
+		head = newNode;
 		tail = newNode;
 	}
 	else
 	{
-		newNode->next = head;							// newNode -> head
-		head->prev = newNode;							// newNode <- head
-		head = newNode;									// Make newNode the head of the list
+		// Link the old head node and the new node so
+		// that the new node comes before the old head node.
+		// Then make the new node the head of the list.
+		newNode->next = head;
+		head->prev = newNode;
+		head = newNode;
 	}
 	++length;
 }
 
-void DLList::insertAtIndex(int val, int i)				// List starts at index 0
+void DLList::insertAtIndex(int val, int i)
 {
-	if (i < 0 || i > length)							// If the index is invalid, exit the method
+	// List starts at index 0
+	
+
+	// If the index is invalid, exit the method
+	if (i < 0 || i > length)
 	{
 		return;
 	}
-	else if (i == 0)									// Inserting at index 0 is the same as inserting at the head
+
+	// If the index is 0 or the list is empty,
+	// insert at the beginning of the list.
+	else if (i == 0 || head == nullptr)
 	{
 		insertAtBeg(val);
 	}
-	else if (i == length)								// Inserting at this index is the same as inserting at the end
+
+	// Inserting at this index is the same as inserting
+	// at the end of the list.
+	else if (i == length)
 	{
 		insertAtEnd(val);
 	}
-	else {
-		DLLNode* newNode(new DLLNode(val));				// Put value in a node called 'newNode'
-		DLLNode* cur = head;							// Node 'cur' is used to read through the list
 
-		for (int j = 0; j < i - 1; ++j)					// Read through the list until we get to the corrent index to insert at
+
+	else {
+		// Put value in a node called 'newNode'
+		DLLNode* newNode(new DLLNode(val));
+
+		// Node 'cur' is used to read through the list
+		DLLNode* cur = head;
+		for (int j = 0; j < i - 1; ++j)
 		{
 			cur = cur->next;
-		}												// 'cur' is now at index i - 1, i.e. the node before where we want to insert at
+		}
 
-		newNode->prev = cur;							// Next 3 lines: Putting newNode between cur and cur->next
+
+		// 'cur' is now at index i - 1, i.e. the node 
+		// before where we want to insert at. 
+		// Now we put newNode between cur and cur->next.
+		// Doing so will reassign cur->next to newNode
+		newNode->prev = cur;
 		newNode->next = cur->next;
 		cur->next = newNode;
 		++length;
@@ -90,36 +119,50 @@ void DLList::insertAtIndex(int val, int i)				// List starts at index 0
 
 void DLList::insertAtEnd(int val)
 {
+	// Put value in a node called 'newNode'
 	DLLNode* newNode(new DLLNode(val));
-	if (!head)											// !head means that the head is nullptr, i.e. the lsit is empty
+
+	// !head means that the head is nullptr, i.e. the list is empty
+	if (head == nullptr)
 	{
-		head = newNode;									// newNode is now both the head and the tail
+		// newNode is now both the head and the tail
+		head = newNode;
 		tail = newNode;
 	}
 	else
 	{
-		tail->next = newNode;							// old tail -> newNode
-		newNode->prev = tail;							// newNode <- old tail
-		tail = newNode;									// Make newNode the tail
+		// Make the newNode come after the old tail node.
+		// Then make the old tail be the node before newNode.
+		// Lastly, make newNode the tail of the list.
+		tail->next = newNode;
+		newNode->prev = tail;
+		tail = newNode;
 	}
 	++length;
 }
 
 void DLList::deleteAtBeg()
 {
-	if (!head)											// !head means that the list is empty (the head is nullptr)
+	// !head means that the list is empty (the head is nullptr)
+	if (head == nullptr)
 	{
 		return;
 	}
-	else if (!head->next)								// Means there's only one element in the list
+
+	// Means there's only one element in the list
+	else if (head->next == nullptr)
 	{
 		head = nullptr;
 		tail = nullptr;
 	}
 	else
 	{
-		head = head->next;								// Make the second element in the list the head
-		delete head->prev;								// Free memory at the old head and assign it to nullptr
+		// Make the second element in the list the head
+		// Free memory at the old head and assign it to nullptr
+		// so that its value will not be displayed when the
+		// display() method id used.
+		head = head->next;
+		delete head->prev;
 		head->prev = nullptr;
 	}
 	--length;
@@ -127,7 +170,8 @@ void DLList::deleteAtBeg()
 
 void DLList::deleteAtIndex(int i)
 {
-	if (!head || i < 0 || i >= length)					// If the list is empty, or i is an invalid index, exit the method
+	// If the list is empty, or i is an invalid index, exit the method
+	if (head == nullptr || i < 0 || i >= length)
 	{
 		return;
 	}
@@ -145,12 +189,17 @@ void DLList::deleteAtIndex(int i)
 		for (int j = 0; j < i; ++j)
 		{
 			cur = cur->next;
-		}												// "cur" is now the node we want to delete
+		}
 
+		// "cur" is now the node we want to delete
+		// Create two nodes 'beforeCur' and 'afterCur'
+		// for better code readability.
 		DLLNode* beforeCur = cur->prev;
 		DLLNode* afterCur = cur->next;
 
-		beforeCur->next = afterCur;						// Make the list skip over the node to be deleted
+		// Make the list skip over 'cur'.
+		// Then free the memory at 'cur'
+		beforeCur->next = afterCur;
 		afterCur->prev = beforeCur;
 		delete cur;
 
@@ -160,19 +209,27 @@ void DLList::deleteAtIndex(int i)
 
 void DLList::deleteAtEnd()
 {
-	if (!head)											// !head means the list is empty
+	// !head means the list is empty
+	if (head == nullptr)
 	{
 		return;
 	}
-	else if (!head->next)								// Means there is only one element in the list
+
+	// Means there is only one element in the list
+	else if (head->next == nullptr)
 	{
 		head = nullptr;
 		tail = nullptr;
 	}
+
 	else
 	{
-		tail = tail->prev;								// Make the second-to-last element the tail
-		delete tail->next;								// Free memory at the old tail
+		// Make the second-to-last element in the 
+		// list the tail. Free memory at the old tail,
+		// then assign the old tail nullptr so that
+		// the display() method won't read its value.
+		tail = tail->prev;
+		delete tail->next;
 		tail->next = nullptr;
 	}
 	--length;

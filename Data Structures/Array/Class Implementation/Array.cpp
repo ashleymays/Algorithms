@@ -28,19 +28,24 @@ int Array::getCapacity()
 
 int Array::getFront()
 {
-	return arr[0];								// Front is the first element in the array
+	// Front is the first element in the array
+	return arr[0];
 }
 
 int Array::getBack()
 {
-	return arr[size - 1];						// Rear is the last element in the array
+	// Rear is the last element in the array
+	return arr[size - 1];
 }
 
-int Array::search(int val)						// Linear search; returns the index of the value, or -1 if it was not found
+int Array::search(int val)
 {
+	// Linear search; returns the index of the
+	// value, or -1 if it was not found
 	for (int i = 0; i < size; ++i)
 	{
-		if (val == arr[i])						// If the value was found, return its index 'i'
+		// If the value was found, return its index 'i'
+		if (val == arr[i])
 		{
 			return i;
 		}
@@ -50,21 +55,28 @@ int Array::search(int val)						// Linear search; returns the index of the value
 
 void Array::insertAtBeg(int val)
 {
-	if (!isFull())								// Make sure that the array isn't full before inserting
+	// Make sure that the array isn't full before inserting
+	if (!isFull())
 	{
+		// shift elements to the right one space 
+		// (arr[1] = arr[0], arr[2] = arr[3], etc.)
 		++size;
-		for (int i = size - 2; i >= 0; --i)		// shift elements to the right one space (arr[1] = arr[0], arr[2] = arr[3], etc.)
+		for (int i = size - 2; i >= 0; --i)
 		{
 			arr[i + 1] = arr[i];
 		}
-		arr[0] = val;							// put value at the front
+
+		// put value at the front
+		arr[0] = val;
 	}
 }
 
 void Array::insertAtIndex(int val, int i)
 {
-	if (!isFull() || i < 0 || i >= size)		// Make sure that the array isn't full before inserting
-	{											// and that i is a valid index to insert at
+	// Make sure that the array isn't full before inserting
+	// and that i is a valid index to insert at
+	if (!isFull() || i < 0 || i >= size)
+	{
 		return;
 	}
 	else if (i == 0)
@@ -77,8 +89,10 @@ void Array::insertAtIndex(int val, int i)
 	}
 	else
 	{
+		// shift elements to the right one space 
+		// until we get to the corrent index
 		++size;
-		for (int j = size - 2; j >= i; --j)		// shift elements to the right one space until we get to the corrent index
+		for (int j = size - 2; j >= i; --j)
 		{
 			arr[j + 1] = arr[j];
 		}
@@ -88,7 +102,8 @@ void Array::insertAtIndex(int val, int i)
 
 void Array::insertAtEnd(int val)
 {
-	if (!isFull())								// Make sure that the array isn't full before inserting
+	// Make sure that the array isn't full before inserting
+	if (!isFull())
 	{
 		arr[size] = val;
 		++size;
@@ -97,11 +112,17 @@ void Array::insertAtEnd(int val)
 
 void Array::deleteValue(int val)
 {
-	int i = search(val);						// Confirm that the value is in the array and
-	if (!isEmpty() || i == -1)					// make sure that the array isn't empty before deleting
+	// Confirm that the value is in the array and
+	int i = search(val);
+
+
+	// make sure that the array isn't empty before deleting
+	if (!isEmpty() || i == -1)
 	{
-		for (int j = i; j < size; ++j)			// Shift all the elements to the left, which will
-		{										// reassign the value at index 'i' to arr[i + 1]
+		// Shift all the elements to the left, which will
+		// reassign the value at index 'i' to arr[i + 1]
+		for (int j = i; j < size; ++j)
+		{
 			arr[j] = arr[j + 1];
 		}
 		--size;

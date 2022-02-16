@@ -19,10 +19,12 @@ void bubbleSort(vector<int>& arr)
     int tmp;
     for (int i = 0; i < arr.size() - 1; ++i)
     {
-        for (int j = i + 1; j < arr.size(); ++j)    // Assume arr[i] is the minimum
+        for (int j = i + 1; j < arr.size(); ++j)
         {
-            if (arr[j] < arr[i])                    // Whenever there's a smaller element "arr[j]" 
-            {                                       // in the subarray, swap arr[i] with it
+            // Whenever there's a smaller element "arr[j]"
+            // in the subarray, swap arr[i] with it.
+            if (arr[j] < arr[i]) 
+            {
                 tmp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = tmp;

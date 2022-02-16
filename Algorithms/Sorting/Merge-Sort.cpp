@@ -14,7 +14,6 @@
 using namespace std;
 
 
-// Conquer
 void merge(vector<int>& arr, int start, int mid, int end)
 {
 	int size1 = mid - start + 1;
@@ -67,7 +66,6 @@ void merge(vector<int>& arr, int start, int mid, int end)
 
 
 
-// Divide
 void mergeSort(vector<int>& arr, int start, int end)
 {
 	if (start < end)
