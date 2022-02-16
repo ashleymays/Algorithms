@@ -25,3 +25,4 @@ Data Structures
         * [STL Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Linked%20List/Doubly%20Linked%20List/STL%20Implementation)
 * [Stack](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Stack)
     * [Class Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Stack/Class%20Implementation)
+    * [STL Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Stack/STL%20Implementation)
