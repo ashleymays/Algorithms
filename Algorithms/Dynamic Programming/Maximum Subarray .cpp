@@ -24,6 +24,13 @@ int maxSumArray(const std::vector<int>& arr)
         currSum += arr[i];
 
 
+        // If the current sum is greater than the maximum sum,
+        // then update the maximum sum.
+        if (currSum > maxSum)
+        {
+            maxSum = currSum;
+        }
+        
         // If the current sum is negative, then reset it to zero
         // since we assume there are some positive numbers in the
         // array. If there are positive numbers, then there must
@@ -32,13 +39,6 @@ int maxSumArray(const std::vector<int>& arr)
         if (currSum < 0)
         {
             currSum = 0;
-        }
-
-        // If the current sum is greater than the maximum sum,
-        // then update the maximum sum.
-        if (currSum > maxSum)
-        {
-            maxSum = currSum;
         }
     }
 
