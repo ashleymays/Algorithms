@@ -1,5 +1,5 @@
-#include "Array.h"
 #include <iostream>
+#include "Array.h"
 
 Array::~Array()
 {
