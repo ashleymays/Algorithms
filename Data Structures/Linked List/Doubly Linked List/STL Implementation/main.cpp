@@ -1,45 +1,43 @@
 
-// List - STL Demonstration
+// Doubly Linked List - STL Demonstration
+// Read more at https://www.cplusplus.com/reference/list/list/
 
 #include <iostream>
 #include <list>
 #include <algorithm>
-using namespace std;
 
-int main()
+
+// Display elements
+void display(std::list<int>& list)
 {
-    list<int> list = { 1,2,3,4,5 };
-    cout << "Front: " << list.front() << endl;
-    cout << "Back: " << list.back() << endl;
-    cout << "Size: " << list.size() << endl;
-
-    list.push_front(0);
-    cout << "Pushed 0 to front." << endl;
-
-    list.push_front(-1);
-    cout << "Pushed -1 to front." << endl;
-
-    list.push_back(6);
-    cout << "Pushed 6 to back." << endl;
-
-    list.pop_back();
-    cout << "Popped back." << endl;
-
-    list.pop_front();
-    cout << "Popped front." << endl;
-
-    std::list<int>::iterator secondElement = list.begin();
-    advance(secondElement, 2);
-    list.erase(secondElement);
-    cout << "Erased third element." << endl;
-
-    // Display elements
     std::list<int>::iterator it;
     for (it = list.begin(); it != list.end(); ++it)
     {
-        cout << *it << ' ';
+        std::cout << *it << ' ';
     }
-    cout << endl;
+    std::cout << std::endl;
+}
+
+int main()
+{
+    std::list<int> list = { 1,2,3,4,5 };
+    std::cout << "Front: " << list.front() << std::endl;
+    std::cout << "Back: " << list.back() << std::endl;
+    std::cout << "Size: " << list.size() << std::endl;
+
+    list.push_front(0);
+    std::cout << "Pushed 0 to front." << std::endl;
+
+    list.pop_back();
+    std::cout << "Popped back." << std::endl;
+
+    std::list<int>::iterator secondElement = list.begin();
+    std::advance(secondElement, 2);
+    list.erase(secondElement);
+    std::cout << "Erased third element." << std::endl;
+
+    display(list);
+
 
     return 0;
 }

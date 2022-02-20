@@ -25,6 +25,6 @@ add_executable (CMakeTarget
  "Algorithms/Math/Sieve-of-Eratosthenes.cpp" 
  "Data Structures/Stack/Class Implementation/Stack.cpp" 
  "Data Structures/Stack/Class Implementation/Stack.h" 
- "Data Structures/Stack/Class Implementation/main.cpp" "Data Structures/Stack/STL Implementation/main.cpp" "Algorithms/Dynamic Programming/Maximum Subarray .cpp")
+ "Data Structures/Stack/Class Implementation/main.cpp" "Data Structures/Stack/STL Implementation/main.cpp" "Algorithms/Dynamic Programming/Maximum Subarray .cpp" "Data Structures/Queue/Class Implementation/main.cpp" "Data Structures/Queue/Class Implementation/Queue.cpp"   "Data Structures/Queue/Class Implementation/Queue.h" "Data Structures/Queue/STL Implementation/main.cpp")
 
 # TODO: Add tests and install targets if needed.
