@@ -28,3 +28,6 @@ Data Structures
 * [Stack](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Stack)
     * [Class Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Stack/Class%20Implementation)
     * [STL Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Stack/STL%20Implementation)
+* [Queue](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Queue)
+    * [Class Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Queue/Class%20Implementation)
+    * [STL Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Queue/STL%20Implementation)
