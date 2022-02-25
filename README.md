@@ -19,15 +19,6 @@ Algorithms
 
 Data Structures
 * [Array](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Array)
-    * [Class Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Array/Class%20Implementation)
-    * [Library Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Array/Library%20Implementation)
-* [Linked List](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Linked%20List)
-    * [Doubly Linked List](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Linked%20List/Doubly%20Linked%20List)
-        * [Class Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Linked%20List/Doubly%20Linked%20List/Class%20Implementation)
-        * [STL Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Linked%20List/Doubly%20Linked%20List/STL%20Implementation)
+* [Doubly Linked List](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Linked%20List/Doubly%20Linked%20List)
 * [Stack](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Stack)
-    * [Class Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Stack/Class%20Implementation)
-    * [STL Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Stack/STL%20Implementation)
 * [Queue](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Queue)
-    * [Class Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Queue/Class%20Implementation)
-    * [STL Implementation](https://github.com/ashleymays/Algorithms/tree/master/Data%20Structures/Queue/STL%20Implementation)
