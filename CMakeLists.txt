@@ -16,15 +16,21 @@ add_executable (CMakeTarget
 "Data Structures/Array/Class Implementation/Array.h" 
 "Data Structures/Stack/Class Implementation/main.cpp"
 "Data Structures/Array/Library Implementation/main.cpp"
-"Data Structures/Linked List/Doubly Linked List/Class Implementation/DoublyLinkedList.cpp" 
-"Data Structures/Linked List/Doubly Linked List/Class Implementation/DoublyLinkedList.h" 
-"Data Structures/Linked List/Doubly Linked List/Class Implementation/main.cpp"
-"Data Structures/Linked List/Doubly Linked List/STL Implementation/main.cpp"
+"Data Structures/Doubly Linked List/Class Implementation/DoublyLinkedList.cpp" 
+"Data Structures/Doubly Linked List/Class Implementation/DoublyLinkedList.h" 
+"Data Structures/Doubly Linked List/Class Implementation/main.cpp"
+"Data Structures/Doubly Linked List/STL Implementation/main.cpp"
  "Algorithms/Sorting/Quicksort-End-Pivot.cpp" 
  "Algorithms/Sorting/Quicksort-Start-Pivot.cpp" 
  "Algorithms/Math/Sieve-of-Eratosthenes.cpp" 
  "Data Structures/Stack/Class Implementation/Stack.cpp" 
  "Data Structures/Stack/Class Implementation/Stack.h" 
- "Data Structures/Stack/Class Implementation/main.cpp" "Data Structures/Stack/STL Implementation/main.cpp" "Algorithms/Dynamic Programming/Maximum Subarray .cpp" "Data Structures/Queue/Class Implementation/main.cpp" "Data Structures/Queue/Class Implementation/Queue.cpp"   "Data Structures/Queue/Class Implementation/Queue.h" "Data Structures/Queue/STL Implementation/main.cpp")
+ "Data Structures/Stack/Class Implementation/main.cpp" 
+ "Data Structures/Stack/STL Implementation/main.cpp" 
+ "Algorithms/Dynamic Programming/Maximum Subarray .cpp" 
+ "Data Structures/Queue/Class Implementation/main.cpp" 
+ "Data Structures/Queue/Class Implementation/Queue.cpp"   
+ "Data Structures/Queue/Class Implementation/Queue.h" 
+ "Data Structures/Queue/STL Implementation/main.cpp")
 
 # TODO: Add tests and install targets if needed.
