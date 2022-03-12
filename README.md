@@ -14,6 +14,7 @@ Algorithms
     * [Quicksort - Start Pivot](https://github.com/ashleymays/Algorithms/blob/master/Algorithms/Sorting/Quicksort-Start-Pivot.cpp)
 * [Math](https://github.com/ashleymays/Algorithms/tree/master/Algorithms/Math)
    * [Sieve of Eratosthenes](https://github.com/ashleymays/Algorithms/blob/master/Algorithms/Math/Sieve-of-Eratosthenes.cpp)
+   * [Infix to Postfix Notation - Shunting Yard Algorithm](https://github.com/ashleymays/Algorithms/blob/master/Algorithms/Math/Infix-to-Postfix.cpp)
 * [Dynamic Programming](https://github.com/ashleymays/Algorithms/tree/master/Algorithms/Dynamic%20Programming)
    * [Maximum Subarray Problem - Kadane's Algorithm](https://github.com/ashleymays/Algorithms/blob/master/Algorithms/Dynamic%20Programming/Maximum%20Subarray%20.cpp)
 
