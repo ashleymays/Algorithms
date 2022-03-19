@@ -1,6 +1,6 @@
 # Algorithms and Data Structures
 
-This is a compiled list of algorithms and data structures in C++ including explanations. New algorithms are added every day as I learn them. Below are the algorithms and data structures currently available.
+This is a list of algorithms and data structures in C++ including explanations. Below are the algorithms and data structures currently available.
 
 Algorithms
 * [Searching](https://github.com/ashleymays/Algorithms/tree/master/Algorithms/Searching)
