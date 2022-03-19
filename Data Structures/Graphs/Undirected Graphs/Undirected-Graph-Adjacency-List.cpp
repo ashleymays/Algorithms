@@ -16,16 +16,31 @@
 #include <iostream>
 #include <vector>
 
-void addEdge(std::vector<int> adj[4], int u, int v)
+class Graph
 {
-	// since this is an undirected graph, we add a connection to and from both vertices 'u' and 'v'
+private:
+	// 'adj' is our adjacency list.
+	// We initialize the size with the constructor 'Graph(...)'
+	std::vector<std::vector<int>> adj;
+	int numberOfVertices;
+
+public:
+	Graph(int n) : numberOfVertices(n), adj(n, std::vector<int>()) {}
+
+	void addEdge(int u, int v);
+	void display();
+};
+
+void Graph::addEdge(int u, int v)
+{
+	// Since this is an undirected graph, we add an edge to and from both vertices 'u' and 'v'
 	adj[u].push_back(v);
 	adj[v].push_back(u);
 }
 
-void display(const std::vector<int> adj[4])
+void Graph::display()
 {
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < numberOfVertices; ++i)
 	{
 		std::cout << "Vertex " << i << ": ";
 		for (int j = 0; j < adj[i].size(); ++j)
@@ -38,15 +53,15 @@ void display(const std::vector<int> adj[4])
 
 int main()
 {
-	std::vector<int> adj[4]; // 4 vertices in this graph
+	Graph graph(4);
 
-	addEdge(adj, 0, 1);
-	addEdge(adj, 0, 2);
-	addEdge(adj, 0, 3);
-	addEdge(adj, 1, 3);
-	addEdge(adj, 2, 3);
+	graph.addEdge(0, 1);
+	graph.addEdge(0, 2);
+	graph.addEdge(0, 3);
+	graph.addEdge(1, 3);
+	graph.addEdge(2, 3);
 
-	display(adj);
+	graph.display();
 
 
 

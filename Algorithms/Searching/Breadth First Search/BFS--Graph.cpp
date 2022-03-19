@@ -1,7 +1,7 @@
 /*
 	Breadth First Search - Graph
 
-	We implement a Breadth First Search algorithm for a graph.
+	We implement a Breadth First Search algorithm for a graph. 
 	For this implementation, we use an undirected graph represented as an adjacency list.
 
 	Time Complexity: O(|V| + |E|), where |V| is the number of vertices and |E| is the number of edges.
@@ -51,6 +51,8 @@ void Graph::display()
 	}
 }
 
+
+// Breadth First Search
 void Graph::BFS(int start)
 {
 	// Vector of booleans to check what nodes have been visited. Nodes are the indices.

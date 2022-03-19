@@ -31,6 +31,10 @@ add_executable (CMakeTarget
  "Data Structures/Queue/Class Implementation/main.cpp" 
  "Data Structures/Queue/Class Implementation/Queue.cpp"   
  "Data Structures/Queue/Class Implementation/Queue.h" 
- "Data Structures/Queue/STL Implementation/main.cpp"  "Data Structures/Graphs/Undirected Graphs/Adjacency-List.cpp" "Data Structures/Graphs/Undirected Graphs/Adjacency-Matrix.cpp" "Algorithms/Math/Infix-to-Postfix.cpp"   "Algorithms/Searching/Breadth First Search/BFS-Graph.cpp")
+ "Data Structures/Queue/STL Implementation/main.cpp"  
+ "Data Structures/Graphs/Undirected Graphs/Undirected-Graph-Adjacency-List.cpp" 
+ "Data Structures/Graphs/Undirected Graphs/Undirected-Graph-Adjacency-Matrix.cpp" 
+ "Algorithms/Math/Infix-to-Postfix.cpp"   
+ "Algorithms/Searching/Breadth First Search/BFS--Graph.cpp")
 
 # TODO: Add tests and install targets if needed.
