@@ -6,6 +6,7 @@ Algorithms
 * [Searching](https://github.com/ashleymays/Algorithms/tree/master/Algorithms/Searching)
     * [Binary Search](https://github.com/ashleymays/Algorithms/blob/master/Algorithms/Searching/Binary-Search.cpp)
     * [Breadth First Search](https://github.com/ashleymays/Algorithms/tree/master/Algorithms/Searching/Breadth%20First%20Search)
+    * [Depth First Search](https://github.com/ashleymays/Algorithms/tree/master/Algorithms/Searching/Depth%20First%20Search)
 * [Sorting](https://github.com/ashleymays/Algorithms/tree/master/Algorithms/Sorting)
     * [Selection Sort](https://github.com/ashleymays/Algorithms/blob/master/Algorithms/Sorting/Selection-Sort.cpp)
     * [Bubble Sort](https://github.com/ashleymays/Algorithms/blob/master/Algorithms/Sorting/Bubble-Sort.cpp)
