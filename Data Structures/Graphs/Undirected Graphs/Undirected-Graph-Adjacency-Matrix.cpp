@@ -20,10 +20,9 @@ private:
     // 'adj' is our adjacency matrix.
     // We initialize the size with the constructor 'Graph(...)'
     std::vector<std::vector<bool>> adj;
-    int numberOfVertices;
 
 public:
-    Graph(int n) : numberOfVertices(n), adj(n, std::vector<bool>(n, false)) {}
+    Graph(int n) : adj(n, std::vector<bool>(n, false)) {}
 
     void addEdge(int u, int v);
     void display();
@@ -38,10 +37,10 @@ void Graph::addEdge(int u, int v)
 
 void Graph::display()
 {
-    for (int i = 0; i < numberOfVertices; ++i)
+    for (int i = 0; i < adj.size(); ++i)
     {
         std::cout << "Vertex " << i << ": ";
-        for (int j = 0; j < numberOfVertices; ++j)
+        for (int j = 0; j < adj[i].size(); ++j)
         {
             std::cout << adj[i][j] << ' ';
         }
