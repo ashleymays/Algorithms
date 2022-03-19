@@ -1,17 +1,17 @@
 /*
-	Breadth First Search - Graph
+	Depth First Search - Graph
 
-	We implement a Breadth First Search algorithm for a graph.
+	We implement a Depth First Search algorithm for a graph.
 	For this implementation, we use an undirected graph represented as an adjacency list.
 
 	Time Complexity: O(|V| + |E|), where |V| is the number of vertices and |E| is the number of edges.
 
-	Read more at https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/
+	Read more at https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/
 */
 
 #include <iostream>
 #include <vector>
-#include <queue>
+#include <stack>
 
 class Graph {
 private:
@@ -22,7 +22,7 @@ public:
 
 	void addEdge(int u, int v);
 	void display();
-	void BFS(int start);
+	void DFS(int start);
 };
 
 void Graph::addEdge(int u, int v)
@@ -45,42 +45,46 @@ void Graph::display()
 }
 
 
-// Breadth First Search
-void Graph::BFS(int start)
+// Depth First Search
+void Graph::DFS(int start)
 {
-	// Vector of booleans to check what nodes have been visited. Nodes are the indices.
-	// Ex: "visited[2] = true" means that the node with value 2 has been visited
+	// Vector of booleans to check what vertices have been visited. Vertices are the indices.
+	// Ex: "visited[2] = true" means that the vertex with value 2 has been visited
 	std::vector<bool> visited(adj.size(), false);
 
-	// Queue to keep track of the current node's neighbors (i.e. nodes on the same level).
-	std::queue<int> q;
+	// Stack to keep track of the current vertex's neighbors (i.e. nodes on the same level).
+	std::stack<int> s;
 
-	// Push the starting node into the queue and mark the starting node as visited.
-	q.push(start);
+	// Push the starting node into the stack and mark the starting vertex as visited.
+	s.push(start);
 	visited[start] = true;
 	std::cout << "Starting at: " << start << std::endl;
 
 
 
 	int v;
-	while (!q.empty())
+	while (!s.empty())
 	{
-		// The current node is the next node in the queue.
-		v = q.front();
-		q.pop();
+		// The current vertex is the next vertex in the stack.
+		v = s.top();
+		s.pop();
+
+		if (!visited[v])
+		{
+			visited[v] = true;
+		}
 
 
-		std::cout << "Current Node: " << v << std::endl;
+		std::cout << "Current Vertex: " << v << std::endl;
 
 
-		// Read all the neighbors of the current node.
+		// Read all the neighbors of the current vertex.
 		for (int i = 0; i < adj[v].size(); ++i)
 		{
-			// If the neighboring node hasn't been visited, add it to the queue.
+			// If the neighboring vertex hasn't been visited, add it to the stack.
 			if (!visited[adj[v][i]])
 			{
-				q.push(adj[v][i]);
-				visited[adj[v][i]] = true;
+				s.push(adj[v][i]);
 				std::cout << "Visited: " << adj[v][i] << std::endl;
 			}
 		}
@@ -97,7 +101,7 @@ int main()
 	graph.addEdge(2, 1);
 	graph.addEdge(2, 5);
 
-	graph.BFS(0);
+	graph.DFS(0);
 
 	return 0;
 }

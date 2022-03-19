@@ -35,6 +35,6 @@ add_executable (CMakeTarget
  "Data Structures/Graphs/Undirected Graphs/Undirected-Graph-Adjacency-List.cpp" 
  "Data Structures/Graphs/Undirected Graphs/Undirected-Graph-Adjacency-Matrix.cpp" 
  "Algorithms/Math/Infix-to-Postfix.cpp"   
- "Algorithms/Searching/Breadth First Search/BFS--Graph.cpp")
+ "Algorithms/Searching/Breadth First Search/BFS--Graph.cpp" "Algorithms/Searching/Depth First Search/DFS--Graph.cpp")
 
 # TODO: Add tests and install targets if needed.
