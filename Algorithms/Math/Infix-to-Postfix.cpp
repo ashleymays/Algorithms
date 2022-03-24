@@ -26,7 +26,7 @@ public:
     void convertInfixToPostfix(const std::string& infix);
     void solvePostfix();
     std::string getPostfix();
-    int getResult();
+    float getResult();
 private:
     bool isDigit(const char& c);
     bool isOperator(const char& c);
@@ -34,9 +34,9 @@ private:
     bool hasGreaterPrecedence(const char& a, const char& b);
     bool hasEqualPrecedence(const char& a, const char& b);
     bool isLeftAssociative(const char& c);
-    int operation(const int& a, const int& b, const char& op);
+    float operation(const float& a, const float& b, const char& op);
     std::string postfix;
-    int result;
+    float result;
 };
 
 std::string Expression::getPostfix()
@@ -44,7 +44,7 @@ std::string Expression::getPostfix()
     return postfix;
 }
 
-int Expression::getResult()
+float Expression::getResult()
 {
     return result;
 }
@@ -84,11 +84,11 @@ bool Expression::isLeftAssociative(const char& c)
     return isOperator(c) && (c == '+' || c == '-' || c == '*' || c == '/');
 }
 
-int Expression::operation(const int& a, const int& b, const char& op)
+float Expression::operation(const float& a, const float& b, const char& op)
 {
     if (op == '^')
     {
-        return pow(a, b);
+        return pow(b, a);
     }
     else if (op == '+')
     {
@@ -96,11 +96,11 @@ int Expression::operation(const int& a, const int& b, const char& op)
     }
     else if (op == '-')
     {
-        return a - b;
+        return b - a;
     }
     else if (op == '/')
     {
-        return a / b;
+        return b / a;
     }
     else
     {
@@ -175,8 +175,8 @@ void Expression::convertInfixToPostfix(const std::string& infix)
 
 void Expression::solvePostfix()
 {
-    std::stack<int> nums;
-    int operand1, operand2;
+    std::stack<float> nums;
+    float operand1, operand2;
     for (int i = 0; i < postfix.size(); ++i)
     {
         // If the postfix expression has a number, add it to the stack.
@@ -205,7 +205,7 @@ void Expression::solvePostfix()
 int main()
 {
     Expression obj;
-    std::string infix = "3 * (2 + 4)";
+    std::string infix = "5^2 / (2 * 4)";
     obj.convertInfixToPostfix(infix);
     obj.solvePostfix();
 
