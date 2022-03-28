@@ -6,8 +6,7 @@
 	In a graph, we have a set of vertices and a set of edges.
 	An edge connects two vertices. In an undirected graph, the
 	order of the two vertices doesn't matter. In this implementation,
-	we use a vector array instead of a list array for easier access and
-	deletion.
+	we use a vector array instead of a list array for easier access.
 
 	Read more at https://www.geeksforgeeks.org/graph-and-its-representations/
 */
