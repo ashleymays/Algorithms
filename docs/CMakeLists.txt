@@ -15,7 +15,7 @@ add_executable (CMakeTarget
 "Array/Class Implementation/Array.cpp" 
 "Array/Class Implementation/Array.h" 
 "Stack/Class Implementation/main.cpp"
-"Array/Library Implementation/main.cpp"
+"Array/STL Implementation/main.cpp"
 "Doubly Linked List/Class Implementation/DoublyLinkedList.cpp" 
 "Doubly Linked List/Class Implementation/DoublyLinkedList.h" 
 "Doubly Linked List/Class Implementation/main.cpp"
