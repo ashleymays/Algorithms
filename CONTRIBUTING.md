@@ -1,4 +1,14 @@
 # Contributions
+
+## Branch Naming Conventions
+* Adding a new algorithm or data structure: ```-add-name_of_alg_or_ds``` (e.g. ```-add-infix-to-postfix``` or ```-add-undirected-graph```)
+* Editing an existing algorithm or data structure: ```-edit-name_of_file``` (e.g. ```-edit-infix-to-postfix```)
+* Fixing a bug: ```-fix-issue-issue_id_here``` (e.g. ```fix-issue-14239```)
+
+## Folder and File Naming Conventions
+* Folders are titled in title casing (e.g. “Dynamic Programming”). New folders should be made if it is part of a new subtopic, like a new data structure or type of algorithm, or if there are multiple files for one algorithm or data structure representation.
+* Files are titled in all lowercase with dashes between each word for readability (e.g. “sieve-of-eratostheses.cpp”). 
+
 ## How to Contribute
 
 1. First make sure that you have downloaded Git. If not you can [download it here](https://git-scm.com/downloads).
@@ -15,19 +25,15 @@
 
 6. On Github, go to the project repository for this project (the title of the repository should be “ashleymays/Algorithms” in the top left corner of the page).
 
-7. Press the green “Code” button and copy the HTTPS URL
+7. Press the green “Code” button and copy the HTTPS URL.
 
 8. In Git Bash, add the project repository as the upstream by typing ```git remote add upstream project_url_here```
 
 9. Merge any new changes from the project repository by typing ```git pull origin master```
 
-10. Create a new branch by typing ```git checkout -b branch_name_here```
-    * Branch naming convention for this project
-        * Adding a new algorithm or data structure: ```-add-name_of_alg_or_ds``` (e.g. ```-add-infix-to-postfix``` or ```-add-undirected-graph```)
-    * Editing an existing algorithm or data structure: ```-edit-name_of_file``` (e.g. ```-edit-infix-to-postfix```)
-    * Fixing a bug: ```-fix-issue-issue_id_here``` (e.g. ```fix-issue-14239```)
+10. Create a new branch by typing ```git checkout -b branch_name_here```. [Here are the branch naming conventions for this project.](#branch-naming-conventions) 
 
-11. Open your copy of the project in your local IDE or code editor
+11. Open your copy of the project in your local IDE or code editor. If you want to add a folder or file, please make sure to follow [the naming conventions](#folder-and-file-naming-conventions).
 
 12. After making the changes, type ```git add -A``` and then ```git commit -m “description_of_changes_here”
 (e.g. ```git commit -m “added a directed graph representation”```)
@@ -43,8 +49,3 @@
 If there are no errors in your pull request, then your contribution will be merged into the project.
 
 You can read a more in-depth explanation [here](https://www.dataschool.io/how-to-contribute-on-github/).
-
-<br />
-
-## Folder and File Naming Conventions
-Folders are titled in title casing (e.g. “Dynamic Programming”) and files are titled in all lowercase with dashes between each word for readability (e.g. “sieve-of-eratostheses.cpp”). New folders should be made if it is part of a new subtopic, like a new data structure or type of algorithm, or if there are multiple files for one algorithm or data structure representation.
