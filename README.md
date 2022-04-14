@@ -1,6 +1,6 @@
 # Algorithms and Data Structures
 
-This is a collection of data structures and algorithms in C++ including explanations, comments, and links to further reading. It�s meant to be an educational resource for those that are new to data structures and algorithms, and to be a repository for new programmers to make their first or second contributions to.
+This is a collection of data structures and algorithms in C++ including explanations, comments, and links to further reading. It's meant to be an educational resource for those that are new to data structures and algorithms, and to be a repository for new programmers to make their first or second contributions to.
 
 ## Data Structures and Algorithms Added
 ### Searching
