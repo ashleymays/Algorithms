@@ -5,6 +5,8 @@
 */
 
 #include <iostream>
+using namespace std;
+
 
 int gcd(int a, int b)
 {
@@ -33,7 +35,7 @@ int main()
     int a = 50;
     int b = 30;
 
-    std::cout << "gcd(" << a << ", " << b << ") = " << gcd(a, b) << std::endl;
+    cout << "gcd(" << a << ", " << b << ") = " << gcd(a, b) << endl;
 
     return 0;
 }

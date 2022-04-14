@@ -10,8 +10,10 @@
 #include <iostream>
 #include <vector>
 #include <climits>
+using namespace std;
 
-int maxSumArray(const std::vector<int>& arr)
+
+int maxSumArray(const vector<int>& arr)
 {
     // Declare "currSum" to keep track of the sum thus far
     // Declare "maxSum" to keep track of the overall maximum sum
@@ -49,8 +51,8 @@ int maxSumArray(const std::vector<int>& arr)
 
 int main()
 {
-    std::vector<int> arr = { -2,1,-3,4,-1,2,1,-5,4 };
-    std::cout << maxSumArray(arr) << std::endl;
+    vector<int> arr = { -2,1,-3,4,-1,2,1,-5,4 };
+    cout << maxSumArray(arr) << endl;
 
     return 0;
 }

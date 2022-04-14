@@ -1,12 +1,12 @@
 /*
-    Infix to Postfix
+    Infix to Postfix Notation Algorithm
 
     This algorithm converts a mathematical expression from infix notation to postfix notation, also
     known as Reverse Polish notation. For example, the infix expression "3 * 2 + 4" will be converted to
     "3 2 * 4 +".
 
-    Time Complexity: O(n^2) because of the while loops inside the for loop in the algorithm
-    Space Complexity: O(n) because of the creation of a postfix string
+    Time Complexity: O(n^2)
+    Space Complexity: O(n)
 
     This implementation also has a method 'solvePostfix()' which will solve the expression when it is in postfix notation.
     Further explanation of the algorithm is in the method "convertInfixToPostfix"
@@ -18,14 +18,15 @@
 #include <string>
 #include <stack>
 #include <cmath>
+using namespace std;
 
 class Expression
 {
 public:
     Expression() : postfix(""), result(0) {}
-    void convertInfixToPostfix(const std::string& infix);
+    void convertInfixToPostfix(const string& infix);
     void solvePostfix();
-    std::string getPostfix();
+    string getPostfix();
     float getResult();
 private:
     bool isDigit(const char& c);
@@ -35,7 +36,7 @@ private:
     bool hasEqualPrecedence(const char& a, const char& b);
     bool isLeftAssociative(const char& c);
     float operation(const float& a, const float& b, const char& op);
-    std::string postfix;
+    string postfix;
     float result;
 };
 
@@ -108,9 +109,9 @@ float Expression::operation(const float& a, const float& b, const char& op)
     }
 }
 
-void Expression::convertInfixToPostfix(const std::string& infix)
+void Expression::convertInfixToPostfix(const string& infix)
 {
-    std::stack<char> operators;
+    stack<char> operators;
     for (int i = 0; i < infix.size(); ++i)
     {
         // If it's a digit, add it to the postfix string
@@ -175,7 +176,7 @@ void Expression::convertInfixToPostfix(const std::string& infix)
 
 void Expression::solvePostfix()
 {
-    std::stack<float> nums;
+    stack<float> nums;
     float operand1, operand2;
     for (int i = 0; i < postfix.size(); ++i)
     {
@@ -205,12 +206,12 @@ void Expression::solvePostfix()
 int main()
 {
     Expression obj;
-    std::string infix = "5^2 / (2 * 4)";
+    string infix = "5^2 / (2 * 4)";
     obj.convertInfixToPostfix(infix);
     obj.solvePostfix();
 
-    std::cout << obj.getPostfix() << std::endl;
-    std::cout << obj.getResult() << std::endl;
+    cout << obj.getPostfix() << endl;
+    cout << obj.getResult() << endl;
 
     return 0;
 }

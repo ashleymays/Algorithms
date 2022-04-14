@@ -12,10 +12,11 @@
 #include <iostream>
 #include <vector>
 #include <stack>
+using namespace std;
 
 class Graph {
 private:
-	std::vector<std::vector<int>> adj;
+	vector<vector<int>> adj;
 
 public:
 	Graph(int n) : adj(n) {}
@@ -35,12 +36,12 @@ void Graph::display()
 {
 	for (int i = 0; i < adj.size(); ++i)
 	{
-		std::cout << "Vertex " << i << ": ";
+		cout << "Vertex " << i << ": ";
 		for (int j = 0; j < adj[i].size(); ++j)
 		{
-			std::cout << adj[i][j] << ' ';
+			cout << adj[i][j] << ' ';
 		}
-		std::cout << std::endl;
+		cout << endl;
 	}
 }
 
@@ -50,15 +51,15 @@ void Graph::DFS(int start)
 {
 	// Vector of booleans to check what vertices have been visited. Vertices are the indices.
 	// Ex: "visited[2] = true" means that the vertex with value 2 has been visited
-	std::vector<bool> visited(adj.size(), false);
+	vector<bool> visited(adj.size(), false);
 
 	// Stack to keep track of the current vertex's neighbors (i.e. nodes on the same level).
-	std::stack<int> s;
+	stack<int> s;
 
 	// Push the starting node into the stack and mark the starting vertex as visited.
 	s.push(start);
 	visited[start] = true;
-	std::cout << "Starting at: " << start << std::endl;
+	cout << "Starting at: " << start << endl;
 
 
 
@@ -75,7 +76,7 @@ void Graph::DFS(int start)
 		}
 
 
-		std::cout << "Current Vertex: " << v << std::endl;
+		cout << "Current Vertex: " << v << endl;
 
 
 		// Read all the neighbors of the current vertex.
@@ -85,7 +86,7 @@ void Graph::DFS(int start)
 			if (!visited[adj[v][i]])
 			{
 				s.push(adj[v][i]);
-				std::cout << "Visited: " << adj[v][i] << std::endl;
+				cout << "Visited: " << adj[v][i] << endl;
 			}
 		}
 	}

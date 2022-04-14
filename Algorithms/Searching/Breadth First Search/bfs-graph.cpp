@@ -12,10 +12,11 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+using namespace std;
 
 class Graph {
 private:
-	std::vector<std::vector<int>> adj;
+	vector<vector<int>> adj;
 
 public:
 	Graph(int n) : adj(n) {}
@@ -35,12 +36,12 @@ void Graph::display()
 {
 	for (int i = 0; i < adj.size(); ++i)
 	{
-		std::cout << "Vertex " << i << ": ";
+		cout << "Vertex " << i << ": ";
 		for (int j = 0; j < adj[i].size(); ++j)
 		{
-			std::cout << adj[i][j] << ' ';
+			cout << adj[i][j] << ' ';
 		}
-		std::cout << std::endl;
+		cout << endl;
 	}
 }
 
@@ -50,15 +51,15 @@ void Graph::BFS(int start)
 {
 	// Vector of booleans to check what nodes have been visited. Nodes are the indices.
 	// Ex: "visited[2] = true" means that the node with value 2 has been visited
-	std::vector<bool> visited(adj.size(), false);
+	vector<bool> visited(adj.size(), false);
 
 	// Queue to keep track of the current node's neighbors (i.e. nodes on the same level).
-	std::queue<int> q;
+	queue<int> q;
 
 	// Push the starting node into the queue and mark the starting node as visited.
 	q.push(start);
 	visited[start] = true;
-	std::cout << "Starting at: " << start << std::endl;
+	cout << "Starting at: " << start << endl;
 
 
 
@@ -70,7 +71,7 @@ void Graph::BFS(int start)
 		q.pop();
 
 
-		std::cout << "Current Node: " << v << std::endl;
+		cout << "Current Node: " << v << endl;
 
 
 		// Read all the neighbors of the current node.
@@ -81,7 +82,7 @@ void Graph::BFS(int start)
 			{
 				q.push(adj[v][i]);
 				visited[adj[v][i]] = true;
-				std::cout << "Visited: " << adj[v][i] << std::endl;
+				cout << "Visited: " << adj[v][i] << endl;
 			}
 		}
 	}

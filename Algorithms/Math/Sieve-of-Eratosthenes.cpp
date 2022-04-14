@@ -1,7 +1,7 @@
 /*
 	Sieve of Eratosthenes
 
-	Purpose: used to get all the prime numbers under a certain number
+	Purpose: to get all the prime numbers within a given range
 
 	Time Complexity: O(n log(log(n))
 	Space Complexity: O(n)
@@ -20,7 +20,7 @@ void display(const vector<int>& primes)
 	cout << endl;
 }
 
-void sieveOfEratosthenes(int& limit)
+void sieveOfEratosthenes(int limit)
 {
 	// Create a vector of booleans [0,...,limit - 1] 
 	// and assign each value to true. We will determine if
