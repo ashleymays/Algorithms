@@ -46,7 +46,7 @@ This is a collection of data structures and algorithms in C++ including explanat
     * [Adjacency List Representation](https://github.com/ashleymays/Algorithms/blob/master/src/Graphs/Undirected%20Graphs/undirected-graph-adjacency-list.cpp)
 
 ## Contributing
-Feel free to contribute! First make sure that the algorithm or data structure hasn't been added yet, then check out this project's [contribution guidelines](https://github.com/ashleymays/Algorithms/blob/master/docs/CONTRIBUTING).
+Feel free to contribute! First make sure that the algorithm or data structure hasn't been added yet, then check out this project's [contribution guidelines](https://github.com/ashleymays/Algorithms/blob/master/docs/CONTRIBUTING.md).
 
 ## License
 This project is protected under the [MIT license](https://github.com/ashleymays/Algorithms/blob/master/docs/LICENSE).
