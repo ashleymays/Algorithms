@@ -41,9 +41,11 @@ This is a collection of data structures and algorithms in C++ including explanat
 * [STL Implementation](https://github.com/ashleymays/Algorithms/blob/master/src/Queue/STL%20Implementation/main.cpp)
 
 ### Graphs
+* Directed Graph
+    * [Adjacency Matrix Representation](https://github.com/ashleymays/Algorithms/blob/master/src/Graphs/Directed%20Graph/directed-graph-adjacency-matrix.cpp)
 * Undirected Graph
-    * [Adjacency Matrix Representation](https://github.com/ashleymays/Algorithms/blob/master/src/Graphs/Undirected%20Graphs/undirected-graph-adjacency-matrix.cpp)
-    * [Adjacency List Representation](https://github.com/ashleymays/Algorithms/blob/master/src/Graphs/Undirected%20Graphs/undirected-graph-adjacency-list.cpp)
+    * [Adjacency Matrix Representation](https://github.com/ashleymays/Algorithms/blob/master/src/Graphs/Undirected%20Graph/undirected-graph-adjacency-matrix.cpp)
+    * [Adjacency List Representation](https://github.com/ashleymays/Algorithms/blob/master/src/Graphs/Undirected%20Graph/undirected-graph-adjacency-list.cpp)
 
 ## Contributing
 Feel free to contribute! First make sure that the algorithm or data structure hasn't been added yet, then check out this project's [contribution guidelines](https://github.com/ashleymays/Algorithms/blob/master/docs/CONTRIBUTING.md).
