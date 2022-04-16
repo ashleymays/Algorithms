@@ -1,9 +1,9 @@
 # Contributions
 
 ## Branch Naming Conventions
-* Adding a new algorithm or data structure: ```-add-name_of_alg_or_ds``` (e.g. ```-add-infix-to-postfix``` or ```-add-undirected-graph```)
-* Editing an existing algorithm or data structure: ```-edit-name_of_file``` (e.g. ```-edit-infix-to-postfix```)
-* Fixing a bug: ```-fix-issue-issue_id_here``` (e.g. ```fix-issue-14239```)
+* Adding a new algorithm or data structure: ```add-name_of_alg_or_ds``` (e.g. ```add-infix-to-postfix``` or ```add-undirected-graph```)
+* Editing an existing algorithm or data structure: ```edit-name_of_file``` (e.g. ```edit-infix-to-postfix```)
+* Fixing a bug: ```fix-issue-issue_id_here``` (e.g. ```fix-issue-14239```)
 
 ## Folder and File Naming Conventions
 * Folders are titled in title casing (e.g. “Dynamic Programming”). New folders should be made if it is part of a new subtopic, like a new data structure or type of algorithm, or if there are multiple files for one algorithm or data structure representation.
