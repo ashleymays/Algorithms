@@ -43,6 +43,7 @@ This is a collection of data structures and algorithms in C++ including explanat
 ### Graphs
 * Directed Graph
     * [Adjacency Matrix Representation](https://github.com/ashleymays/Algorithms/blob/master/src/Graphs/Directed%20Graph/directed-graph-adjacency-matrix.cpp)
+    * [Adjacency List Representation](https://github.com/ashleymays/Algorithms/blob/master/src/Graphs/Directed%20Graph/directed-graph-adjacency-list.cpp)
 * Undirected Graph
     * [Adjacency Matrix Representation](https://github.com/ashleymays/Algorithms/blob/master/src/Graphs/Undirected%20Graph/undirected-graph-adjacency-matrix.cpp)
     * [Adjacency List Representation](https://github.com/ashleymays/Algorithms/blob/master/src/Graphs/Undirected%20Graph/undirected-graph-adjacency-list.cpp)
