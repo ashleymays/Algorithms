@@ -29,7 +29,7 @@ int binarySearch(const vector<int>& arr, int value)
 	{
 		mid = (l + r) / 2;
 
-		// value was found -> return index mid
+		// value was found -> return its index
 		if (value == arr[mid])
 		{
 			return mid;
