@@ -4,6 +4,3 @@ This is a collection of data structures and algorithms in C++ including explanat
 
 ## License
 This project is protected under the [MIT license](https://github.com/ashleymays/Algorithms/blob/master/docs/LICENSE).
-
-## Contact Me
-If you have any questions, you can email me at ashleymays091@gmail.com.
