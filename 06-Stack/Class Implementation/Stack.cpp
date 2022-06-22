@@ -2,19 +2,9 @@
 #include "Stack.h"
 using namespace std;
 
-Stack::~Stack()
-{
-	delete[] stack;
-}
-
 int Stack::getSize()
 {
 	return size;
-}
-
-int Stack::getCapacity()
-{
-	return capacity;
 }
 
 bool Stack::isEmpty()
@@ -22,18 +12,10 @@ bool Stack::isEmpty()
 	return size == 0;
 }
 
-bool Stack::isFull()
-{
-	return size == capacity;
-}
-
 void Stack::push(int val)
 {
-	if (!isFull())
-	{
-		++size;
-		stack[size - 1] = val;
-	}
+	++size;
+	stack[size - 1] = val;
 }
 
 void Stack::pop()

@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     // Create a new stack "nums" with a capacity of 10;
-    Stack nums(5);
+    Stack nums;
     nums.push(10);
     nums.push(20);
     nums.push(30);
