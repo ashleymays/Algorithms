@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Stack.h"
+using namespace std;
 
 Stack::~Stack()
 {
@@ -28,7 +29,6 @@ bool Stack::isFull()
 
 void Stack::push(int val)
 {
-	// check that there's space in the array before inserting
 	if (!isFull())
 	{
 		++size;
@@ -38,7 +38,6 @@ void Stack::push(int val)
 
 void Stack::pop()
 {
-	// check that there's something in the array before removing
 	if (!isEmpty())
 	{
 		--size;
@@ -47,20 +46,22 @@ void Stack::pop()
 
 int Stack::top()
 {
-	// check that there is something in the array first
+	// stack isn't empty -> return the element at the end
 	if (!isEmpty())
 	{
 		return stack[size - 1];
 	}
+
+	// stack is empty -> return -1
 	return -1;
 }
 
 void Stack::display()
 {
-	std::cout << "Data: ";
+	cout << "Stack: ";
 	for (int i = 0; i < size; ++i)
 	{
-		std::cout << stack[i] << ' ';
+		cout << stack[i] << ' ';
 	}
-	std::cout << std::endl;
+	cout << endl;
 }

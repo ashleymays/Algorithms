@@ -1,21 +1,28 @@
 #include <iostream>
 #include "Stack.h"
+using namespace std;
 
 int main()
 {
-	Stack s(10);
-	s.push(10);
-	s.push(20);
-	s.push(30);
-	s.push(40);
-	s.push(50);
+    // Create a new stack "nums" with a capacity of 10;
+    Stack nums(5);
+    nums.push(10);
+    nums.push(20);
+    nums.push(30);
+    nums.push(40);
+    nums.push(50);
 
-	s.display();
+    // display "nums"
+    nums.display();
 
-	s.pop();
+    // pop the top element off the stack
+    nums.pop();
 
-	s.display();
+    // display "nums"
+    nums.display();
 
+    // display the top element
+    cout << "Top: " << nums.top() << endl;
 
-	return 0;
+    return 0;
 }

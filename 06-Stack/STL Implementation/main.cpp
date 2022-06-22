@@ -1,42 +1,56 @@
+/*
+    Stack - STL Implementation
 
-// Stack - STL Implementation
-// Read more at https://www.cplusplus.com/reference/stack/stack/
+    This is an implementation of a stack using the predefined header file in C++.
+
+*/
 
 #include <iostream>
 #include <stack>
+using namespace std;
 
 
 // Display elements
-void display(std::stack<char> stack)
+void display(stack<int> stack)
 {
-    // the stack library doesn't have iterators, so you have to make
-    // a copy of it (pass by value) and pop elements off
+    // We can't iterate through the stack, so we make
+    // a copy of it (by passing the stack by value),
+    // read the top element, and pop it off until the
+    // stack is empty.
+
     int size = stack.size();
+
+    cout << "Stack: ";
     for (int i = 0; i < size; ++i)
     {
-        std::cout << stack.top() << ' ';
+        cout << stack.top() << ' ';
         stack.pop();
     }
-    std::cout << std::endl;
+    cout << endl;
 }
 
 int main()
 {
-    // Create new stack "letters" and add characters
-    std::stack<char> letters;
-    letters.push('a');
-    letters.push('b');
-    letters.push('c');
-    letters.push('d');
-    letters.push('e');
+    // Create new stack "nums"
+    stack<int> nums;
 
-    display(letters);
+    nums.push(10);
+    nums.push(20);
+    nums.push(30);
+    nums.push(40);
+    nums.push(50);
 
-    letters.pop();
-    std::cout << "Popped." << std::endl;
+    // display "nums"
+    display(nums);
 
-    display(letters);
+    // pop the top element off the stack
+    nums.pop();
 
+    // display "nums"
+    display(nums);
+
+    // display the top element
+    cout << "Top: " << nums.top() << endl;
 
     return 0;
 }
